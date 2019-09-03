@@ -1,1 +1,28 @@
-<p>search works!</p>
+<div class="row searchHeader">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-8 searchBar">
+        <div class="input-group mb-3">
+
+          <!-- Gestion du champ de recherche -->
+          <form [formGroup]="searchForm" (ngSubmit)="searchTracks($event)">
+            <input type="text" formControlName="searchText" class="form-control col-10 searchInput" placeholder="Search"
+              aria-label="Search">
+            <div class="input-group-append">
+              <span class="input-group-text iconField" id="basic-addon2">
+
+                <!-- Gestion de l'icone "Loupe" de recherche-->
+                <button type="submit" class="btn btn-secondary searchIcon">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-1 settingsIcon">
+        <i class="fa fa-cog" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</div>
