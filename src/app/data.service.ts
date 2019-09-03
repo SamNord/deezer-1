@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class DataService {
 // tableau qui contiendra les likes
   mesLikes: Array<any> = new Array<any>();
+  myPlaylist: Array<any> = new Array<any>();
 
   albums = [
     {
