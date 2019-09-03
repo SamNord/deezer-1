@@ -45,6 +45,8 @@ const myRoute : Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(myRoute)
     
   ],

@@ -1,0 +1,13 @@
+.text {
+
+    color: yellowgreen;
+    font-size: 21px;
+    font-weight: bold;
+    border: solid 1px gray;
+     
+}
+
+div .text :hover {
+
+    box-shadow: 
+}
