@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from "@angular/forms"
 
 @Component({
@@ -8,7 +8,7 @@ import { FormControl, FormGroup, FormBuilder, Validators } from "@angular/forms"
 })
 
 export class SearchComponent implements OnInit {
-
+@Output () searchValue;
   
   searchForm : FormGroup = this.fb.group({
     searchText : ['',Validators.required]
@@ -23,5 +23,6 @@ export class SearchComponent implements OnInit {
   searchTracks(event) {
     event.preventDefault();
     console.log(this.searchForm.value);
+    this.searchValue = this.searchForm.value;
   }
 }
