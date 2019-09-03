@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-playlist',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playlist.component.css']
 })
 export class PlaylistComponent implements OnInit {
+  nouveauPlaylist = false;
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
   }
+
+  ajout() {
+
+    this.nouveauPlaylist = true;
+    document.querySelector('button').style.display = "none";
+  }
+
+ 
+
 
 }

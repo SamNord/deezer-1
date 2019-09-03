@@ -1,1 +1,24 @@
-<p>playlist works!</p>
+<section class="container">
+    <div class="row">
+        <button (click)="ajout()">Ajouter playlist</button>
+    </div>
+
+    <div class="row" *ngIf="nouveauPlaylist">
+        <div class="col-12">
+
+            <h1>PLaylist</h1>
+
+            <form>
+                <label for="name">Nom de votre playlist</label>&nbsp;
+                <input type="text" name="playlist" ([ngModel]) = "playlist" /> <br>
+                <button type="submit" class="btn btn-success" (click)="ajouter($event)">Ajouter</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="col-12">
+            <div class="text"> {{playlist}} </div>
+        </div>
+    </div>
+</section>
