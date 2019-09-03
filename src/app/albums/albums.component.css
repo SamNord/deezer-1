@@ -32,4 +32,9 @@ p :hover {
     color: rgb(0, 255, 0);
 }
 
+div img {
+
+    margin:5px;
+}
+
 
