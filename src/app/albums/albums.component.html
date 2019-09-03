@@ -1,17 +1,17 @@
-<div clas="row">
-    <div class="col-12">
-        <div class="row">
-            <div class="col-4 m-2" *ngFor="let elt of album" style="margin:5px">
-                <div><img src="{{elt.image}}"/></div>
-                <div class="text">{{elt.title}}</div>
-                <div class="text">{{elt.chanteur}}</div>
-                <a href=""><i class="fa fa-heart" aria-hidden="true"></i></a>&nbsp;
-                <a href=""> <i class="fa fa-retweet" aria-hidden="true"></i></a>&nbsp;
-                <a href=""><i class="fa fa-bookmark" aria-hidden="true"></i> </a>&nbsp;
-                <a href=""> <i class="fa fa-external-link" aria-hidden="true"></i></a>&nbsp;
-                <a href=""> <i class="fa fa-clipboard" aria-hidden="true"></i></a>&nbsp;
-                <div class="style">{{elt.style}}</div>
-            </div>
+<!-- <div clas="row"> -->
+<div class="col-12">
+    <div class="row">
+        <div class="col-2" *ngFor="let elt of album" style="margin:5px">
+            <div class="image"><img src="{{elt.image}}" /></div>
+            <div class="text">{{elt.title}}</div>
+            <div class="text">{{elt.chanteur}}</div>
+            <a routerLink="likes"><i class="fa fa-heart" aria-hidden="true"></i></a>&nbsp;
+            <a href=""> <i class="fa fa-retweet" aria-hidden="true"></i></a>&nbsp;
+            <a routerLink="tracks"><i class="fa fa-bookmark" aria-hidden="true"></i> </a>&nbsp;
+            <a href=""> <i class="fa fa-external-link" aria-hidden="true"></i></a>&nbsp;
+            <a href=""> <i class="fa fa-clipboard" aria-hidden="true"></i></a>&nbsp;
+            <div class="style">{{elt.style}}</div>
         </div>
     </div>
+
 </div>

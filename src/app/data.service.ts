@@ -24,6 +24,12 @@ export class DataService {
       image: "assets/album3.jpg",
       style: "#magic song"
     },
+    {
+      title: "Aaja Nachle ",
+      chanteur: "Sunidhi Chauhan",
+      image: "assets/album4.jpg",
+      style: "#hindi"
+    }
 
   ]
 
