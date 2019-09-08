@@ -7,7 +7,51 @@
      
 }
 
-div .text :hover {
 
-    box-shadow: 
+.style {
+    position: absolute;
+    margin-top: -304px;
+    margin-left: 117px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    font-size: 16px;
 }
+
+.text {
+    color: rgb(28, 229, 236);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+img {
+    border: 1px solid gray;
+    padding: 5px;
+    box-shadow: 2px 2px 10px gray;
+    -moz-box-shadow: 2px 2px 10px gray;
+    -webkit-box-shadow: 2px 2px 10px gray;
+    width: 190px;
+    height: 232px;
+}
+
+p .like {
+    color: rgb(0, 255, 0);
+}
+
+ p :hover {
+
+    color: rgb(0, 255, 0);
+
+}
+
+p {
+
+    color: white;
+}
+
+h1 {
+
+    color: white;
+}
+
+

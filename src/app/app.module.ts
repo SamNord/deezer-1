@@ -48,7 +48,6 @@ const myRoute : Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(myRoute)
-    
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

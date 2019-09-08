@@ -13,16 +13,19 @@
 .logo{
     border-radius: 50%;
     width: 50px;
+    margin-right: 80px;
 }
+
+
 
 .user{
     color: white;
-    /* margin-right: 120px */
+    margin-right: 120px
 }
 .log{
     color:grey;
     margin-top: 40px;
-    /* margin-left: -175px; */
+    margin-left: -175px;
     
 }
 
@@ -42,6 +45,7 @@
     color:rgba(52, 49, 53);
     background-color: rgba(9, 148, 9, 0.9);
     box-shadow: 3px -3px 2px  black;
+    
 }
 
 .menu a {
@@ -50,11 +54,5 @@
     box-shadow: 3px -3px 2px  black;
     color: rgb(3, 141, 3);
     
+
 }
-
-/* .avatar {
-    margin-left: 78px;
-
-} */
-
-

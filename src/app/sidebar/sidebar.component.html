@@ -1,67 +1,66 @@
 <!-- <div class="col-4 sidebar"> -->
-<div class="row">
+    <div class="row">
 
-    <div class="col-md-12 logoName">
-        <!-- Logo de base, on devra récupérer celui de l'utilisateur après log in -->
-        <div class="col-md-6 avatar"><img src="assets/avatar1.png" class="logo"></div>
-        <!-- Nom de l'utilisateur ( Invité si pas de Login) + Fonction Log In / Log out-->
-        <div class="col-md-6 user"> <strong>Invité </strong></div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12 log">
-        Log in
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col-md-12 follow">
-        <div class="col-5 following">
-            <!-- Il faudra récupérer le nb de personnes followed par la personne logged -->
-            <p class="nbFollowing" style="color: grey"> 0 <span style="color: grey">Following</span></p>
-        </div>
-        <!-- Il faudra récupérer le nb de personnes que la personne follow -->
-        <div class="col-md-5 followers">
-            <p class="nbFollowers" style="color: grey"> 0 <span style="color: grey">Followers</span></p>
+        <div class="col-12 logoName">
+            <!-- Logo de base, on devra récupérer celui de l'utilisateur après log in -->
+            <img src="assets/avatar1.png" class="logo">
+            <!-- Nom de l'utilisateur ( Invité si pas de Login) + Fonction Log In / Log out-->
+            <p class="user"> <strong>Invité </strong></p>
+        </div> 
+    
+        <div class="row">
+            <p class="log"> Log in</p>
         </div>
     </div>
-</div>
-
-
-
-<div class="row">
-    <div class="col-md-12 menu">
-        <a href="" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-trophy" aria-hidden="true">&nbsp;Top
-                50</i> </a>
+    
+    <div class="row">
+        <div class="col-12 follow">
+            <div class="col-5 following">
+                <!-- Il faudra récupérer le nb de personnes followed par la personne logged -->
+                <p class="nbFollowing" style="color: grey"> 0 <span style="color: grey">Following</span></p>
+            </div>
+            <!-- Il faudra récupérer le nb de personnes que la personne follow -->
+            <div class="col-5 followers">
+                <p class="nbFollowers" style="color: grey"> 0 <span style="color: grey">Followers</span></p>
+            </div>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-12 menu">
-        <a routerLink="stream" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-cloud"
-                aria-hidden="true">&nbsp;
-                Stream</i></a>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12 menu">
-        <a routerLink="likes" class="btn btn-secondary btn-lg btn-block item"><i class="fa fa-heart"
-                aria-hidden="true">&nbsp;
-                Likes</i>
-        </a>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12 menu">
-        <a routerLink="tracks" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-tags"
-                aria-hidden="true">&nbsp;
-                Track</i></a>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12 menu">
-        <a routerLink="playlist" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-bookmark"
-                aria-hidden="true">&nbsp; Playlist</i></a>
-    </div>
-</div>
+    
+    
+    
+        <div class="row it">
+            <div class="col-12 menu">
+                <a href="" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-trophy"
+                        aria-hidden="true">&nbsp;Top
+                        50</i> </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 menu">
+                <a routerLink="stream" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-cloud"
+                        aria-hidden="true">&nbsp;
+                        Stream</i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 menu">
+                <a routerLink="likes" class="btn btn-secondary btn-lg btn-block item"><i class="fa fa-heart"
+                        aria-hidden="true">&nbsp;
+                        Likes</i>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 menu">
+                <a routerLink="tracks" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-tags"
+                        aria-hidden="true">&nbsp;
+                        Track</i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 menu">
+                <a routerLink="playlist" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-bookmark"
+                        aria-hidden="true">&nbsp; Playlist</i></a>
+            </div>
+        </div>
+        <!-- </div> -->

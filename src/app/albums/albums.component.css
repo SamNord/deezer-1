@@ -32,9 +32,13 @@ p :hover {
     color: rgb(0, 255, 0);
 }
 
-div img {
+h2 {
+    color: white;
+}
 
-    margin:5px;
+.col-2 :hover {
+
+    box-shadow: 3px 3px yellow, -1em 0 .4em olive;
 }
 
 
