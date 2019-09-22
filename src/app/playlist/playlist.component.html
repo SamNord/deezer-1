@@ -32,9 +32,9 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12" *ngIf='clicPlaylist'>
+        <div class="col-5" *ngIf='clicPlaylist'>
             <div class="row">
-                <div class="col-md-5" *ngFor="let elt of albums">
+                <div class="col-md-6" *ngFor="let elt of albums">
                     <div class="image"><img src="{{elt.image}}" /></div>
                     <div class="text">{{elt.title}}</div>
                     <div class="text">{{elt.chanteur}}</div>

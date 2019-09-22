@@ -13,7 +13,7 @@
 .logo{
     border-radius: 50%;
     width: 50px;
-    margin-right: 80px;
+   
 }
 
 
@@ -24,8 +24,8 @@
 }
 .log{
     color:grey;
-    margin-top: 40px;
-    margin-left: -175px;
+    /* margin-top: 40px;
+    margin-left: -175px; */
     
 }
 
