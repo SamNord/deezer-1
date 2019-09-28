@@ -13,6 +13,7 @@ export class AlbumsComponent implements OnInit {
   tabMyPlaylist;
   add: number;
   router: Router;
+  compteur: number;
 
   constructor(private data: DataService) { }
 
@@ -33,7 +34,9 @@ export class AlbumsComponent implements OnInit {
       let elt = this.album.find((u => u.id == id));
       // On l'ajoute dans le tableau des favoris
       this.data.mesLikes.push(elt);
+
     }
+
   }
 
   ajoutInPlaylist = (id) => {

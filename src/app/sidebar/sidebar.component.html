@@ -1,4 +1,5 @@
 <!-- <div class="col-4 sidebar"> -->
+<div class="row" *ngIf = "logged">
     <div class="row">
 
         <div class="col-12 logoName">
@@ -6,13 +7,13 @@
             <img src="assets/avatar1.png" class="logo ml-3">
             <!-- Nom de l'utilisateur ( Invité si pas de Login) + Fonction Log In / Log out-->
             <p class="user ml-3"> <strong>Invité </strong></p>
-        </div> 
-    
-        <div class="row ml-3">
-            <p class="log ml-3"> Log in</p>
+        </div>
+
+        <div class="row ml-3" (click)= "logOut()">
+            <p class="log ml-3" class="btn btn-secondary btn-sm"> Log out</p>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-12 follow">
             <div class="col-5 following">
@@ -25,42 +26,60 @@
             </div>
         </div>
     </div>
-    
-    
-    
-        <div class="row it">
-            <div class="col-md-12 menu">
-                <a href="" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-trophy"
-                        aria-hidden="true">&nbsp;Top
-                        50</i> </a>
+</div>
+
+<div class="row m-3" *ngIf = "!logged">
+    <div class="col-12">
+        <form [formGroup]='formLogin' (ngSubmit)="valider()">
+            <div class="row">
+                <label for="identifiant">identifiant</label>
+                <input type="text" formControlName='pseudo'>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 menu">
-                <a routerLink="stream" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-cloud"
-                        aria-hidden="true">&nbsp;
-                        Stream</i></a>
+            <div class="row">
+                <label for="pass">Votre mot de passe</label>
+                <input type="password" formControlName='pass'>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 menu">
-                <a routerLink="likes" class="btn btn-secondary btn-lg btn-block item"><i class="fa fa-heart"
-                        aria-hidden="true">&nbsp;
-                        Likes</i>
-                </a>
+            <div class="row">
+                <button type="submit" class="btn btn-success" [disabled]="!formLogin.valid">Se connecter</button>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 menu">
-                <a routerLink="tracks" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-tags"
-                        aria-hidden="true">&nbsp;
-                        Track</i></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 menu">
-                <a routerLink="playlist" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-bookmark"
-                        aria-hidden="true">&nbsp; Playlist</i></a>
-            </div>
-        </div>
-        <!-- </div> -->
+        </form>
+    </div>
+</div>
+
+<!-- fin cadre login    -->
+
+<div class="row it">
+    <div class="col-md-12 menu">
+        <a href="" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-trophy" aria-hidden="true">&nbsp;Top
+                50</i> </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 menu">
+        <a routerLink="stream" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-cloud"
+                aria-hidden="true">&nbsp;
+                Stream</i></a>
+    </div>
+</div>
+<div class="row" *ngIf = "logged">
+    <div class="col-md-12 menu">
+        <a routerLink="likes" class="btn btn-secondary btn-lg btn-block item"><i class="fa fa-heart"
+                aria-hidden="true">&nbsp;
+                Likes</i>
+        </a>
+    </div>
+</div>
+<div class="row" *ngIf = "logged">
+    <div class="col-md-12 menu">
+        <a routerLink="tracks" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-tags"
+                aria-hidden="true">&nbsp;
+                Track</i></a>
+    </div>
+</div>
+<div class="row" *ngIf = "logged">
+    <div class="col-md-12 menu">
+        <a routerLink="playlist" class="btn btn-secondary btn-lg btn-block item"> <i class="fa fa-bookmark"
+                aria-hidden="true">&nbsp; Playlist</i></a>
+    </div>
+</div>
+<!-- </div> -->
