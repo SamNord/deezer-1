@@ -36,10 +36,12 @@ h2 {
     color: white;
 }
 
-.col-md-2 :hover {
+.col-3 div  :hover {
 
     box-shadow: 3px 3px yellow, -1em 0 .4em olive;
+       
 }
+
 
 
 
