@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-albums',
@@ -11,6 +12,7 @@ export class AlbumsComponent implements OnInit {
   tabAlbPlaylist; //tableau des music ajoutés dans playlist
   tabMyPlaylist;
   add: number;
+  router: Router;
 
   constructor(private data: DataService) { }
 
@@ -35,33 +37,39 @@ export class AlbumsComponent implements OnInit {
   }
 
   ajoutInPlaylist = (id) => {
-    console.log(id)
+    //console.log(id)
+
+    //ici, on cherche l'élément(album) sur lequel on a cliqué par son id
     let elt = this.album.find((u => u.id == id));
-    let confirmer = prompt('Dans quelle playlist voulez vous ajouter cet album ?');
-    console.log(this.tabAlbPlaylist)
-    this.tabAlbPlaylist.forEach((x) => {
-      console.log(x)
 
-      if (x.title == confirmer) {
+    // console.log(this.tabAlbPlaylist)
 
-        x.albums.push(elt);
-        alert('album ajouté');
-      }
+    // si la playlist n'est pas vide alors 
+    if (this.tabAlbPlaylist.length > 0) {
 
-      // } else if (x.title != confirmer) {
-      //   let confirm = prompt('Voulez vous créer une nouvelle playlist: Oui/Non');
-      //   console.log(confirm)
+      let confirmer = prompt('Dans quelle playlist voulez vous ajouter cet album ?');
 
-      //   if (confirm == 'oui') {
-      //     let nouvellePlaylist = prompt('Veuillez entrez une nouvelle playlist');
-      //     let i = this.tabMyPlaylist.find((u));
-      //    this.tabMyPlaylist.push(nouvellePlaylist);
-      //    this.add++;
-      //    console.log(this.tabMyPlaylist);
-      //   }
-      // }
-    })
+      //on parcourt tous les élément dans la playlist pour ajouter notre album
+      this.tabAlbPlaylist.forEach((x) => {
 
+        //x = éléments dans la playlist
+        //si le nom qu'on a entré correspond au nom de la playlist alor on ajoute notre elt(élément = album cliqué) dans celle-ci avec push
+        if (x.title == confirmer) {
+          //x.title = le nom de la playlist
+          x.albums.push(elt);
+          alert('album ajouté');
+        } else {
+          //si le nom qu'on a entré ne correspond pas à une des playlist existante on affiche ce message
+          alert("la playlist indiqué n'existe pas. Cliquez sur la rubrique playlist pour en ajouter une");
+        }
+
+      })
+      // si la playlist est vide, on demande à l'utilisateur d'en créer une    
+    } else {
+
+      alert("la playlist est vide, si voulez vous en créer une, allez sur la rubrique playlist");
+
+    }
 
   }
 }
