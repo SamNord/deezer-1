@@ -18,11 +18,56 @@ export class PlayerComponent implements OnInit {
   paused = false; // booléen pour passer de l'icone play à celui de pause et vice versa : définit dans les fonctions
   music; //l'audio en question
 
-
-  ngOnInit(): void {
-    throw new Error("Method not implemented.");
+  constructor(private data: DataService) {
+    this.music = new Audio(); //l'audio on lui attribut le type audio pour dire qu'il contient de l'audio
   }
 
+
+  ngOnInit() {
+        //on souscrit au subject qu'on a définit dans le DataService
+        this.data.trackObs.subscribe(t => {
+          //élément t correspond à la musique (élément dans tableau musics)
+          this.musics = t;
+          //fonction load() ????? 
+          this.music.load();
+          // on appelle la fonction playAudio() définit un peu plus loin pour lancer le play
+          this.playAudio();
+        })
+        // on attribut le chemin de l'audio music indiqué dans le tableau musics dans app.ts
+        this.music.src = this.musics.url;
+        this.music.ontimeupdate = (e) => {
+          this.duration = this.music.duration;
+          this.elapsed = this.music.currentTime;
+          this.position = (this.elapsed / this.duration) * 100;
+        }
+  }
+
+    // au clic sa lance l'audio, pour que ça marche ne pas oublier de mettre un test au niveau app.html
+    playAudio = () => {
+      //l'icone pause apparait à la place
+      this.paused = true;
+      // ?????? pour load
+      this.music.load();
+      // fonction play définit par angular
+      this.music.play();
+    }
+
+    //evenements (next et previous) transmit au parent grâce à l'output 
+    next = () => {
+      this.nextEmit.emit(this.musics);
+      this.music.src = this.musics.url;
+      console.log(this.music.src);
+      this.music.load();
+      this.playAudio();
+    }
+  
+    previous = () => {
+      this.previousEmit.emit(this.musics);
+      this.music.src = this.musics.url;
+      console.log(this.music.src);
+      this.music.load;
+      this.playAudio();
+    }
   
 
 

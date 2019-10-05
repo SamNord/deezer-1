@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Router } from '@angular/router';
+import { trackModel } from '../models/track.models';
 
 @Component({
   selector: 'app-albums',
@@ -76,10 +77,10 @@ export class AlbumsComponent implements OnInit {
 
   }
 
+
+
   //a compléter : contiendra l'écouteur de l'observable ....next(musique écoutée)
   sendMusictoPlay() {
     this.data.trackObs.next(this.album);
   }
 }
-
-

@@ -8,8 +8,9 @@
                     <div class="style">{{elt.style}}</div>
                 </div>
             </div>
-            <div class="image"><img src="{{elt.image}}" (click)="sendMusictoPlay()"/></div> <!--evenement qui va lancer la musqiue au clic de l'image-->
-            <div class="text">{{elt.title}}</div>
+            <div class="image"><img src="{{elt.image}}"  (click)="sendMusictoPlay()"/></div>
+            <!--evenement qui va lancer la musqiue au clic de l'image-->
+             <div class="text">{{elt.title}}</div>
             <div class="text">{{elt.chanteur}}</div>
             <p><i class="fa fa-heart" aria-hidden="true" (click)="like(elt.id)"></i>&nbsp;
                 <i class="fa fa-retweet" aria-hidden="true"></i>&nbsp;
@@ -18,4 +19,6 @@
                 <i class="fa fa-clipboard" aria-hidden="true"></i></p>&nbsp;
         </div>
     </div>
-</div>
+
+</div>  
+

@@ -31,8 +31,10 @@
 
     </div>
 
+
     <div class="row">
-        <app-player class="col-12 app-player">
+        <app-player class="col-12 app-player" [musics]="trackTest" (nextEmit)="nextTrack($event)"
+            (previousEmit)="previousTrack($event)">
         </app-player>
     </div>
 </div>

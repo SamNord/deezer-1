@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from './data.service';
 import { trackModel } from './models/track.models';
 
@@ -34,4 +34,5 @@ previousTrack = (track) => {
    this.data.trackObs.next(this.audios[index -1])
  }
 
+}
 }
