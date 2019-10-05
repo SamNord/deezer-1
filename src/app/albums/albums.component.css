@@ -1,11 +1,9 @@
 .style {
-    position: absolute;
-    margin-top: -284px;
-    margin-left: 99px;
-    color: white;
+   
+    background-color: gray;
     font-weight: bold;
-    background-color: black;
-    font-size: 16px;
+    color: wheat;
+    font-size: 16px;  
 }
 
 .text {

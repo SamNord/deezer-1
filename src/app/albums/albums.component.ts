@@ -75,6 +75,11 @@ export class AlbumsComponent implements OnInit {
     }
 
   }
+
+  //a compléter : contiendra l'écouteur de l'observable ....next(musique écoutée)
+  sendMusictoPlay() {
+    this.data.trackObs.next(this.album);
+  }
 }
 
 

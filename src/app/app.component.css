@@ -24,3 +24,10 @@ h2 {
     background-color: rgb(41, 36, 36);
 
 }
+
+.app-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+}

@@ -17,6 +17,8 @@ import { PlaylistComponent } from './playlist/playlist.component';
 import { PlayerComponent } from './player/player.component';
 import { RouterModule, Routes } from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MusicProgressComponent } from './music-progress/music-progress.component';
+import { FormatimePipe } from './formatime.pipe';
 
 const myRoute : Routes = [
   {path: 'stream', component: AlbumsComponent},
@@ -40,7 +42,9 @@ const myRoute : Routes = [
     ItemmenuComponent,
     LikesComponent,
     PlaylistComponent,
-    PlayerComponent
+    PlayerComponent,
+    MusicProgressComponent,
+    FormatimePipe
   ],
   imports: [
     BrowserModule,
