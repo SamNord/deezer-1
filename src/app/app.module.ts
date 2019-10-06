@@ -22,12 +22,12 @@ import { FormatimePipe } from './formatime.pipe';
 import { AlbumComponent } from './album/album.component';
 
 const myRoute : Routes = [
-  {path: 'stream', component: AlbumsComponent},
-  {path: '', component: AlbumsComponent},
-  {path: 'likes', component: LikesComponent},
-  {path: 'playlist', component: PlaylistComponent},
-  {path: 'tracks', component: TracksComponent},
-  {path: 'login', component: LoginComponent},
+  // {path: 'stream', component: AlbumsComponent},
+  // {path: '', component: AlbumsComponent},
+  // {path: 'likes', component: LikesComponent},
+  // {path: 'playlist', component: PlaylistComponent},
+  // {path: 'tracks', component: TracksComponent},
+  // {path: 'login', component: LoginComponent},
 ]
 
 @NgModule({

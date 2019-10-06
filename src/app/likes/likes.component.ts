@@ -7,13 +7,12 @@ import { DataService } from '../data.service';
   styleUrls: ['./likes.component.css']
 })
 export class LikesComponent implements OnInit {
-tabLikes;
+
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    //on importe le tableau du service qui contient les likes
-    this.tabLikes = this.data.mesLikes;
+  
   }
 
 }
